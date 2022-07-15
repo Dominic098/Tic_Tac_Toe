@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+h1{
+    color: aqua;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+
+.tile{
+    color: azure;
+    margin: 10px;
+    background-color: grey;
+    justify-content: center;
+}
