@@ -18,20 +18,19 @@ h1{
 
 .tile{
     color: azure;
-    margin: 10px;
-    background-color: grey;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 72px;
 }
 
-/* .right-border{
-    border-right: .2em solid white;
+.right-border{
+    border-right: .5em solid white;
     
 }
     
 .bottom-border{
-    border-bottom: .2em solid white;
+    border-bottom: .5em solid white;
         
-} */
+}
