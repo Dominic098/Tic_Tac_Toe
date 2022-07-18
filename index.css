@@ -21,3 +21,44 @@ h1{
     background-color: grey;
     justify-content: center;
 }
+.tile{
+    
+    position: relative;
+    width: 100px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    border-radius:20px;
+    margin:30px;
+    box-sizing:0 0 10px #000;
+}
+.tile::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height:140%;
+    background: linear-gradient(#00ccff,#d400d4);
+    animation: animate 4s linear infinite;
+    box-shadow: 0 0 20px #999;
+
+}
+.tile::after{
+    content: 'x';
+    text-align: center;
+    position: absolute;
+    inset:4px;
+    background:#0e1538;
+    border-radius:16px;
+
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
