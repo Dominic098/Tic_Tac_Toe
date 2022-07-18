@@ -6,6 +6,14 @@
 console.log("ding")
 var turn = "X";
 
+document.querySelector("button").addEventListener("click", function(event) {
+    let tiles = document.querySelectorAll(".tile");
+   for (let i = 0; i < tiles.length; i++) {
+    const tile = tiles[i];
+    tile.textContent = "";
+   }
+})
+
 document.querySelector("#board").addEventListener("click", function(event){
     console.log(event)
     console.log(event.target.className)
