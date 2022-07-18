@@ -9,7 +9,7 @@ var turn = "X";
 document.querySelector("#board").addEventListener("click", function(event){
     console.log(event)
     console.log(event.target.className)
-    if(event.target.className==="tile"){
+    if(event.target.className.includes("tile")){
         console.log("testing")
 
         if (event.target.textContent === "X" || event.target.textContent === "O") {
