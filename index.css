@@ -19,5 +19,7 @@ h1{
     color: azure;
     margin: 10px;
     background-color: grey;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
