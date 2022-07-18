@@ -11,7 +11,7 @@ document.querySelector("button").addEventListener("click", function(event) {
    for (let i = 0; i < tiles.length; i++) {
     const tile = tiles[i];
     tile.textContent = "";
-   }
+   } 
 })
 
 document.querySelector("#board").addEventListener("click", function(event){
