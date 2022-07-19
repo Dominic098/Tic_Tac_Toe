@@ -10,7 +10,6 @@ var bb="";
 var brb="";
 console.log("ding")
 var turn = "X";
-
 document.querySelector("button").addEventListener("click", function(event) {
     let tiles = document.querySelectorAll(".tile");
    for (let i = 0; i < tiles.length; i++) {
@@ -18,7 +17,6 @@ document.querySelector("button").addEventListener("click", function(event) {
     tile.textContent = "";
    }
 })
-
 document.querySelector("#board").addEventListener("click", function(event){
     console.log(event)
     console.log(event.target.className)
@@ -29,53 +27,68 @@ document.querySelector("#board").addEventListener("click", function(event){
         }
         if (turn === "X") {
             event.target.textContent="X";
-            const el=event.target;
-            el.setAttribute('style','content:yes');
+            if (event.target.className.includes("tile topleft")){
+                tlb = "X";
+            }
+            else if (event.target.className.includes("tile topmid")){
+                tb = "X";
+            }
+            else if (event.target.className.includes("tile topright")){
+                 trb = "X";
+            }
+            else if (event.target.className.includes("tile left")){
+                lb = "X";
+            }
+            else if (event.target.className.includes("tile mid")){
+                 mb = "X";
+            }
+            else if (event.target.className.includes("tile right")){
+                 rb = "X";
+            }
+            else if (event.target.className.includes("tile bottomleft")){
+                blb = "X";
+            }
+            else if (event.target.className.includes("tile bottommid")){
+                bb = "X";
+            }
+            else if (event.target.className.includes("tile bottomright")){
+                brb = "X";
+            }
             turn = "O";
             turnnum ++;
         }
         else {
-            
             event.target.textContent="O";
             if (event.target.className.includes("tile topleft")){
                 tlb = "O"
             }
-     
             else if (event.target.className.includes("tile topmid")){
                 tb = "O"
             }
-
             else if (event.target.className.includes("tile topright")){
                 trb = "O"
             }
-     
             else if (event.target.className.includes("tile left")){
                  lb = "O"
             }
-
             else if (event.target.className.includes("tile mid")){
                 mb = "O"
             }
-
             else if (event.target.className.includes("tile right")){
                 rb = "O"
             }
- 
             else if (event.target.className.includes("tile bottomleft")){
                 blb = "O"
             }
-   
             else if (event.target.className.includes("tile bottommid")){
                 bb = "O"
             }
-
             else if (event.target.className.includes("tile bottomright")){
                 brb = "O"
             }
             turn = "X";
             turnnum ++;
         }
-        
     }
     if (tlb==="X"&&tb==="X"&&trb==="X"){
         alert ("X won!")
@@ -145,5 +158,5 @@ document.querySelector("#board").addEventListener("click", function(event){
         alert ("draw")
         history.go(0)
     }
-    
-})
+}
+)
