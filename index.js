@@ -1,8 +1,13 @@
-// user is playing x, computer is playing o
-//when user clicks a box, that box will show x, also, the computer will select a random different box to turn to o
-// when there are 3 of x or o consecutively, the game ends and a winner is decided
-// need a way to show what the user and computer clicked
-// need a random number generator
+var turnnum= 1;
+var tlb ="";
+var tb= "";
+var trb = "";
+var lb ="";
+var mb = "";
+var rb = "";
+var blb ="";
+var bb="";
+var brb="";
 console.log("ding")
 var turn = "X";
 document.querySelector("button").addEventListener("click", function(event) {
@@ -12,6 +17,7 @@ document.querySelector("button").addEventListener("click", function(event) {
     tile.textContent = "";
    }
 })
+
 document.querySelector("#board").addEventListener("click", function(event){
     console.log(event)
     console.log(event.target.className)
@@ -22,11 +28,87 @@ document.querySelector("#board").addEventListener("click", function(event){
         }
         if (turn === "X") {
             event.target.textContent="X";
+            if (event.target.className.includes("tile topleft")){
+                tlb = "X";
+            }
+     
+            else if (event.target.className.includes("tile topmid")){
+                tb = "X";
+            }
+
+            else if (event.target.className.includes("tile topright")){
+                 trb = "X";
+            }
+     
+            else if (event.target.className.includes("tile left")){
+                lb = "X";
+            }
+
+            else if (event.target.className.includes("tile mid")){
+                 mb = "X";
+            }
+
+            else if (event.target.className.includes("tile right")){
+                 rb = "X";
+            }
+ 
+            else if (event.target.className.includes("tile bottomleft")){
+                blb = "X";
+            }
+   
+            else if (event.target.className.includes("tile bottommid")){
+                bb = "X";
+            }
+
+            else if (event.target.className.includes("tile bottomright")){
+                brb = "X";
+            }
+            
             turn = "O";
+            turnnum ++;
         }
         else {
+            
             event.target.textContent="O";
+            if (event.target.className.includes("tile topleft")){
+                tlb = "O"
+            }
+     
+            else if (event.target.className.includes("tile topmid")){
+                tb = "O"
+            }
+
+            else if (event.target.className.includes("tile topright")){
+                trb = "O"
+            }
+     
+            else if (event.target.className.includes("tile left")){
+                 lb = "O"
+            }
+
+            else if (event.target.className.includes("tile mid")){
+                mb = "O"
+            }
+
+            else if (event.target.className.includes("tile right")){
+                rb = "O"
+            }
+ 
+            else if (event.target.className.includes("tile bottomleft")){
+                blb = "O"
+            }
+   
+            else if (event.target.className.includes("tile bottommid")){
+                bb = "O"
+            }
+
+            else if (event.target.className.includes("tile bottomright")){
+                brb = "O"
+            }
             turn = "X";
+            turnnum ++;
         }
+        
     }
-})
+   }
+}                                 
