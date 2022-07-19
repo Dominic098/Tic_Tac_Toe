@@ -20,11 +20,14 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 70px;
 }
 .right-border{
     border-right: 10px solid white;
 }
 .bottom-border{
     border-bottom: 10px solid white;
+}
+button{
+    font-size: 20px;
 }
